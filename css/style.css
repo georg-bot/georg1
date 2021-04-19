@@ -194,6 +194,11 @@ ul, li, ol {
 a {
     text-decoration: none;
 }
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 [class |='btn'] {
     padding: 5px 20px;
@@ -221,11 +226,15 @@ a {
 }
 
 /* header style start */
+.header {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .menu {
     position: relative;
-    width: 1020px;
-    margin: 50px auto;
 }
 
 .menu>li {
@@ -241,8 +250,8 @@ a {
     padding-left: 5px;
     padding-top: 5px;
     display: block;
-    font-size: 1.3rem;
-    width: 200px;
+    font-size: 1.1rem;
+    width: 120px;
     height: 40px;
     background: #6100fc;
     border-radius: 3px;
@@ -258,6 +267,19 @@ a {
 .menu a:hover {
     background: #29144a;
     color: #ceff88;
+}
+@media screen and (max-width:680px) {
+    .header {
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 10px 30px;
+    }
+    .menu>li {
+        display: block;
+    }
+    .list-1:hover .ul-1, .list-2:hover .ul-2, .list-3:hover .ul-3, .list-4:hover .ul-4, .list-5:hover .ul-5 {
+        display: none;
+    }
 }
 
 /* header style end */
@@ -283,18 +305,29 @@ article {
     clear: both;
     margin-bottom: 50px;
 }
+@media screen and (max-width:700px) {
+    .articles-wrapper img {
+        width: 250px;
+    }
+}
 
 /* article style end */
 
 /* skills start */
+.skills, .cart-wrap {
+    min-height: 900px;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-attachment: fixed;
+}
 
 .skills {
-    min-height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
+    background-image:url(../images/articles/background_024.jpg) ;
 }
 
 div[class |='skill'] {
@@ -347,10 +380,12 @@ div[class |='skill'] {
 /* skills end */
 
 /* cart box start  */
+.cart-wrap {
+     background-image: url(../images/articles/кенренее.jpg);
+}
 
 .cart-box {
     width: 80%;
-    margin: 50px auto;
     display: grid;
     grid-template-areas: 'a a b' 'c d e';
     grid-template-rows: 250px 200px;
@@ -423,7 +458,7 @@ div[class |='skill'] {
 /* tabl style start */
 
 .table-rating {
-    width: 90%;
+    width: 90vw;
     margin: 50px auto;
     color: grey;
     border-collapse: collapse;
@@ -449,7 +484,7 @@ div[class |='skill'] {
 }
 
 .table-rating caption {
-    width: 100%;
+    width: 90vw;
     height: 100px;
     background-color: black;
     background-image: url('../images/table/table/table_header.jpg');
@@ -458,6 +493,20 @@ div[class |='skill'] {
     background-position: center;
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
+}
+@media screen and (max-width: 680px) {
+    .table-rating , .table-rating caption{
+        width: 100%;
+    }
+    .table-rating th, .table-rating td {
+        border: 1px solid grey;
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .table-rating {
+font-size: 10px;
+    }
 }
 
 /* table style end */
@@ -514,6 +563,12 @@ div[class |='skill'] {
 #captcha_check:valid~.captcha_false {
     display: none;
 }
+@media screen and (max-width:870px) {
+    .form-poll {
+        width: 100%;
+    }
+
+}
 
 /* form pou style end */
 
@@ -525,15 +580,14 @@ div[class |='skill'] {
 
 .features-wrap {
     min-height: 885px;
-    padding-top: 171px;
     background-image: url("../images/faetures/left.png"), url("../images/faetures/right.png");
     background-repeat: no-repeat;
     background-position: left center, right 150px;
+    
 }
 
 .features-content {
     width: 761px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -588,6 +642,9 @@ div[class |='skill'] {
     line-height: 19px;
     color: #ADB3CB;
 }
+.features__buttons{
+    margin-bottom: 30px;
+}
 
 .features__buttons>a {
     border-radius: 2px;
@@ -618,6 +675,24 @@ div[class |='skill'] {
 .vithyal-1 {
     background-image: url("../images/articles/кенренее.jpg");
 }
+@media screen and (max-width:770px){
+    .features-content {
+        width: 100%;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,auto);
+    }
+}
+@media screen and (max-width:540px){
+    .features {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+    }
+    .features__buttons-span {
+        margin: 0 ;
+    }
+}
 
 /* get started start */
 
@@ -632,7 +707,6 @@ div[class |='skill'] {
 
 .get-started {
     width: 712px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -671,6 +745,9 @@ div[class |='skill'] {
     font-size: 15px;
     line-height: 29px;
 }
+.get-started {
+    margin-bottom: 30px;
+}
 
 .get-started__buttons>a {
     font-family: Quicksand;
@@ -695,6 +772,11 @@ div[class |='skill'] {
 .get-started__buttons>a:hover {
     background-color: rgb(255, 255, 255);
     color: #565F82;
+}
+@media screen and (max-width: 720px) {
+    .get-started {
+        width: 100%;
+    }
 }
 
 /* get started end */
