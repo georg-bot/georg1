@@ -194,6 +194,7 @@ ul, li, ol {
 a {
     text-decoration: none;
 }
+
 .wrap {
     display: flex;
     justify-content: center;
@@ -226,10 +227,11 @@ a {
 }
 
 /* header style start */
+
 .header {
     min-height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -268,6 +270,28 @@ a {
     background: #29144a;
     color: #ceff88;
 }
+
+.search {
+    position: relative;
+    width: 200px;
+    height: 35px;
+}
+.search__body,.search__icon {
+    position: absolute; 
+}
+
+.search__body {
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    border-radius: 100px;
+}
+.search__icon {
+    width: 15px;
+    right: 10px;
+    top: 12px;
+}
+
 @media screen and (max-width:680px) {
     .header {
         justify-content: flex-start;
@@ -305,6 +329,7 @@ article {
     clear: both;
     margin-bottom: 50px;
 }
+
 @media screen and (max-width:700px) {
     .articles-wrapper img {
         width: 250px;
@@ -314,6 +339,7 @@ article {
 /* article style end */
 
 /* skills start */
+
 .skills, .cart-wrap {
     min-height: 900px;
     /* background-repeat: no-repeat; */
@@ -327,7 +353,7 @@ article {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-image:url(../images/articles/background_024.jpg) ;
+    background-image: url(../images/articles/background_024.jpg);
 }
 
 div[class |='skill'] {
@@ -380,8 +406,9 @@ div[class |='skill'] {
 /* skills end */
 
 /* cart box start  */
+
 .cart-wrap {
-     background-image: url(../images/articles/кенренее.jpg);
+    background-image: url(../images/articles/кенренее.jpg);
 }
 
 .cart-box {
@@ -494,8 +521,9 @@ div[class |='skill'] {
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
 }
+
 @media screen and (max-width: 680px) {
-    .table-rating , .table-rating caption{
+    .table-rating, .table-rating caption {
         width: 100%;
     }
     .table-rating th, .table-rating td {
@@ -503,9 +531,10 @@ div[class |='skill'] {
         padding: 0px;
     }
 }
+
 @media screen and (max-width: 520px) {
     .table-rating {
-font-size: 10px;
+        font-size: 10px;
     }
 }
 
@@ -563,11 +592,11 @@ font-size: 10px;
 #captcha_check:valid~.captcha_false {
     display: none;
 }
+
 @media screen and (max-width:870px) {
     .form-poll {
         width: 100%;
     }
-
 }
 
 /* form pou style end */
@@ -583,7 +612,6 @@ font-size: 10px;
     background-image: url("../images/faetures/left.png"), url("../images/faetures/right.png");
     background-repeat: no-repeat;
     background-position: left center, right 150px;
-    
 }
 
 .features-content {
@@ -642,7 +670,8 @@ font-size: 10px;
     line-height: 19px;
     color: #ADB3CB;
 }
-.features__buttons{
+
+.features__buttons {
     margin-bottom: 30px;
 }
 
@@ -672,25 +701,28 @@ font-size: 10px;
     line-height: 19px;
     color: #ADB3CB;
 }
+
 .vithyal-1 {
     background-image: url("../images/articles/кенренее.jpg");
 }
-@media screen and (max-width:770px){
+
+@media screen and (max-width:770px) {
     .features-content {
         width: 100%;
     }
     .features {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2,auto);
+        grid-template-rows: repeat(2, auto);
     }
 }
-@media screen and (max-width:540px){
+
+@media screen and (max-width:540px) {
     .features {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,auto);
+        grid-template-rows: repeat(4, auto);
     }
     .features__buttons-span {
-        margin: 0 ;
+        margin: 0;
     }
 }
 
@@ -745,6 +777,7 @@ font-size: 10px;
     font-size: 15px;
     line-height: 29px;
 }
+
 .get-started {
     margin-bottom: 30px;
 }
@@ -773,6 +806,7 @@ font-size: 10px;
     background-color: rgb(255, 255, 255);
     color: #565F82;
 }
+
 @media screen and (max-width: 720px) {
     .get-started {
         width: 100%;
